@@ -1,4 +1,4 @@
 # put computer to sleep with powershell
 Add-Type -Assemby System.windows.forms
-$state = ]System.Windows.Forms.PowerState]::Suspend
+$state = [System.Windows.Forms.PowerState]::Suspend
 [System.Windows.forms.Application]::SetSuspendState($state, $false, $false) | Out-Null
