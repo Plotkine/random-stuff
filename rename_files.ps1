@@ -118,7 +118,9 @@ Foreach-Object {
 	if (Test-Path -Path $_.FullName -PathType Leaf) { # avoiding subdirectories
 	    # renaming the file
 	    # Rename-Item -Path "c:\logfiles\daily_file.txt" -NewName "monday_file.txt"
-        Rename-Item -Path $_.FullName -NewName ($_.Name).Substring($pattern.Length, $_.Name.Length - $pattern.Length)
+	    if ($_.Name.StartsWith($pattern)) {
+            Rename-Item -Path $_.FullName -NewName ($_.Name).Substring($pattern.Length, $_.Name.Length - $pattern.Length)
+	    }
     }
 }
 
