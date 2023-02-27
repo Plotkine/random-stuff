@@ -1,2 +1,2 @@
 # Powershell loop to send the ESC key every 5 minutes
-for (;;) {$wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys("{ESC}"); Start-Sleep -Seconds 300}
+for (;;) {$wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys("{NUMLOCK}"); Start-Sleep -Seconds 300}
