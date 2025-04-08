@@ -1,2 +1,2 @@
-# Powershell loop to send the ESC key every 5 minutes
-for (;;) {$wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys("{NUMLOCK}"); Start-Sleep -Seconds 300}
+# Powershell loop to hit the SCROLL LOCK key every 5 minutes
+for (;;) {$wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys("{SCROLLLOCK}"); Start-Sleep -Seconds 300}
